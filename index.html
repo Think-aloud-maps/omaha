@@ -214,8 +214,8 @@
             { title: "Current Time", info: "6:06 PM." },
             { title: "Address of Origin", info: "1206 Dorene Blvd, Carter Lake, IA 51510." },
             { title: "Address of Destination", info: "3326 6th Ave, Council Bluffs, IA 51501." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "5 miles." },
+            { title: "Estimated Time to Destination", info: "13 minutes." },
             { title: "State of Charge of Battery", info: "13% charge." },
             { title: "Range of Current Battery", info: "36 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "27 miles." },
@@ -233,10 +233,10 @@
                 name: 'Park Omaha 17th & Chicago Lot',
 
                 location: '1703 Chicago St, Omaha, NE 68102, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '3.12',
+                originTime: '8',
+                destDistance: '2.73',
+                destTime: '7',
 
                 waitTime: [
                         { type: 'J1772', value: '92' },
@@ -261,7 +261,7 @@
 
                 energySource: '67% grid, 33% renewable',
 
-                chargingFee: '$1.00',
+                chargingFee: '$0.50',
                 chargingFeeRate: 'per two hours',
                 parkingFee: '$0.25',
                 parkingFeeRate: 'per hour',
@@ -280,10 +280,10 @@
                 name: 'Jackson St Parking Garage',
 
                 location: '1011 Jackson St., Omaha 68102',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '3.33',
+                originTime: '9',
+                destDistance: '2.35',
+                destTime: '8',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -300,7 +300,7 @@
 
                 energySource: '72% grid, 28% renewable',
 
-                chargingFee: '$1.00',
+                chargingFee: '$0.50',
                 chargingFeeRate: 'per 2 hour',
                 parkingFee: '$0.25',
                 parkingFeeRate: 'per hour',
@@ -944,8 +944,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
